@@ -1,0 +1,48 @@
+{
+  "name": "dsh-guardian",
+  "version": "0.1.0",
+  "description": "Boot guardian installer for DeepSeek Harness: deploys a standalone PowerShell recovery launcher, creates the desktop shortcut, and exposes /guardian status.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "guardian.ps1",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "guardian",
+    "boot",
+    "recovery"
+  ],
+  "license": "MIT",
+  "author": "hollowfyh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hollowfyh/dsh-guardian.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hollowfyh/dsh-guardian/issues"
+  },
+  "homepage": "https://github.com/hollowfyh/dsh-guardian#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.2": "compatible"
+      }
+    }
+  }
+}
