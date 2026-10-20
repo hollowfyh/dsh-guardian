@@ -1,0 +1,6 @@
+logs/
+backups/
+last-good/
+boot-failure.json
+last-repair.json
+*.log
