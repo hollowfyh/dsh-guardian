@@ -2,6 +2,22 @@
 
 DSH 打不开时，双击桌面上的 **「DeepSeek Harness (守护启动)」** 即可自动修复并启动。
 
+## 安装方式（推荐：作为 DSH 插件）
+
+```bash
+dsh plugin --profile desktop add github:hollowfyh/dsh-guardian
+```
+
+装好后插件会自动：
+
+1. 把 `guardian.ps1` 部署到 `$DSH_HOME/dsh-guardian/`；
+2. 在桌面创建「DeepSeek Harness (守护启动)」快捷方式；
+3. 注册 `/guardian` 斜杠命令，随时查看守护状态（部署、基线、日志、失败报告）。
+
+## 也可以独立使用
+
+直接把本仓库的 `guardian.ps1` 放到任意目录，参考下面「手动命令」运行即可——它完全独立于 DSH。
+
 ## 它做什么
 
 1. 启动 `DeepSeek Harness.exe`；
